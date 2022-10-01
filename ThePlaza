@@ -1,9 +1,3 @@
--- DELETE THIS ⬇️
-_G.Settings = {
-    DiscordAutoJoin = true,
-    Theme = "R1"
-}
--- DELETE THIS ⬆️
 
 
 ver2 =  _G.Settings.Theme -- Shows the theme
