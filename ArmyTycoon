@@ -1,13 +1,6 @@
-
--- DELETE THIS ⬇️
-_G.Settings = {
-    DiscordAutoJoin = true,
-    Theme = "R1"
-}
--- DELETE THIS ⬆️
-	
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solidestcrane7/R1-libabbabba/main/R1Library"))()
-local Window = Library.CreateLib("Rate1 | Army Tycoon💣", _G.Settings.Theme)		
+ver2 =  _G.Settings.Theme -- Shows the theme
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solidestcrane7/R1-libabbabba/main/R1Library"))()	
+local Window = Library.CreateLib("RateOne | Army Tycoon💣  | Theme:  " ..ver2, _G.Settings.Theme)
 
 local PP = Window:NewTab("Player")
 
