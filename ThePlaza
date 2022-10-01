@@ -1619,7 +1619,6 @@ game.StarterGui:SetCore("SendNotification",  {
 end)
 
 --Credit/setting
-
 set:NewButton("Rtx", "Makes your game pretty pretty", function()
 
 getgenv().mode = "Summer" -- Choose from Summer and Autumn
@@ -1682,15 +1681,73 @@ s.Spread = 0.146
 
 end)
 
-set:NewKeybind("Close/Open ui", "Fucking idiot", Enum.KeyCode.LeftControl, function()
-	Library:ToggleUI()
+set:NewTextBox("Test id numbers", "Tests the id to make sure it works (Because the game sucks at doing that)", function(Number)
+
+    local function callback(Text)
+ if Text == "Okay!" then
+  print ("Answer")
+end
+end
+local NotificationBindable = Instance.new("BindableFunction")
+NotificationBindable.OnInvoke = callback
+game.StarterGui:SetCore("SendNotification",  {
+ Title = ("Id: "..Number);
+ Text = "";
+ Icon = ("rbxassetid://"..Number);
+ Duration = 10;
+ Callback = NotificataionBindable;
+})
+
 end)
+set:NewKeybind("Close/Open ui", "Fucking idiot", Enum.KeyCode.LeftControl, function()
+Library:ToggleUI()
+end)
+
+  
+
+
+
+
+
+cre:NewLabel("          This script was made by: x0x (Owner)")
+cre:NewLabel("                        Herbert (Co-Owner) ")
+cre:NewLabel("                                UI: Kavo ")
+cre:NewLabel("       Below this is links to the discord information.")
+
+
 -- Credit
+
+cre:NewButton("JOIN OUR DISCORD!", "Joins the rate one discord!", function()
+local json = {
+	["cmd"] = "INVITE_BROWSER",
+	["args"] = {
+		["code"] = "V6n4xYRHvf"
+	},
+	["nonce"] = 'a'
+}
+spawn(function()
+	print(syn.request({
+		Url = 'http://127.0.0.1:6463/rpc?v=1',
+		Method = 'POST',
+		Headers = {
+			['Content-Type'] = 'application/json',
+			['Origin'] = 'https://discord.com'
+		},
+		Body = game:GetService('HttpService'):JSONEncode(json),
+	}).Body)
+end)
+
+end)
+
 cre:NewButton("Copy x0x#4663 (Owner)", "Copies the owners discord tag", function()
 setclipboard("x0x#4663")
 end)
 
-end
+cre:NewButton("Copy Herbert#5679 (Co-Owner)", "Copies the co-owners discord tag", function()
+setclipboard("Herbert#5679")
+end)
+
+cre:NewLabel("(Thanks for Loser helping script a few things)")
 
 -- Special made checkers
 -- The plaza
