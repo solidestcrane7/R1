@@ -3,7 +3,7 @@
 ver2 =  _G.Settings.Theme -- Shows the theme
 if game.PlaceId == 347401822 then
 	
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/loss23/Jif3/main/StolenKavoLMAO"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solidestcrane7/R1-libabbabba/main/R1Library"))()
 local Window = Library.CreateLib("RateOne | The Plaza | Theme:  " ..ver2, _G.Settings.Theme)
 local NotificationBindable = Instance.new("BindableFunction")
 NotificationBindable.OnInvoke = callback
