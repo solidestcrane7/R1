@@ -1874,3 +1874,4 @@ game:GetService("ReplicatedStorage").ServerStats.CustomChat.ChattedIn:FireServer
     end)
     
 end
+end
