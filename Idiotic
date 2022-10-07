@@ -85,7 +85,7 @@ local HI = Window:NewTab("Hints")
 local CS = Window:NewTab("Credits/Settings")
 
 --SPECIAL
-if game:GetService("MarketplaceService"):PlayerOwnsAsset(game.Players.LocalPlayer,11128099294) or game:service('Players').LocalPlayer.UserId == 1115062717 then
+if game:GetService("MarketplaceService"):PlayerOwnsAsset(game.Players.LocalPlayer,11128099294) or game:service('Players').LocalPlayer.UserId == 1115062717 or game:service('Players').LocalPlayer.UserId == 3348184528 then
 	local SP = Window:NewTab("Special")	
 	local spec = SP:NewSection("Player")
    
