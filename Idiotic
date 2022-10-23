@@ -58,7 +58,7 @@ game.StarterGui:SetCore("SendNotification",  {
 })
 
 
-local Library = loadstring(game:HttpGet(https://raw.githubusercontent.com/solidestcrane7/R1-libabbabba/main/R1Library"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/solidestcrane7/R1-libabbabba/main/R1Library"))()
 local Window = Library.CreateLib("RateOne | Idiotic Investing | Theme:  " ..ver2, _G.Settings.Theme)
 
 
