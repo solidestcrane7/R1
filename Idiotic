@@ -1,4 +1,5 @@
 
+
 ver2 =  _G.Settings.Theme -- Shows the theme
 
 
@@ -93,7 +94,7 @@ if game:GetService("MarketplaceService"):PlayerOwnsAsset(game.Players.LocalPlaye
     --Special
 
 
-spec:NewToggle("Force Win ", "You win NO MATTER WHAT", function()
+spec:NewToggle("Force Win ( Broken atm )", "You win NO MATTER WHAT", function()
        if getgenv().Autowin == false then
         getgenv().Autowin = true
     else
@@ -106,13 +107,12 @@ local args = {
     [2] = "1"
 }
 game:GetService("ReplicatedStorage").SR:FireServer(unpack(args))
-
+game:GetService("ReplicatedStorage")["Screw_Start"]:InvokeServer()
 local args = {
-    [1] = ""
+    [1] = game.Players.LocalPlayer
 }
 
 game:GetService("ReplicatedStorage").Screw_Event:InvokeServer(unpack(args))
- 
 end
 end)
 
@@ -125,11 +125,13 @@ spec:NewTextBox("Screw user", "It takes a little", function(user)
         end
     end
 
+game:GetService("ReplicatedStorage")["Screw_Start"]:InvokeServer()
 local args = {
     [1] = ""..targetted;
 }
 
 game:GetService("ReplicatedStorage").Screw_Event:InvokeServer(unpack(args))
+
 
                             game.StarterGui:SetCore("SendNotification", {
           Icon = "rbxassetid://10223592622"; 
@@ -160,7 +162,7 @@ spec:NewTextBox("Super Screw sleceted user", "It takes a little", function(user)
     end
     
     while getgenv().LoopScrew == true do
-
+game:GetService("ReplicatedStorage")["Screw_Start"]:InvokeServer()
 local args = {
     [1] = ""..targetted
 }
@@ -171,6 +173,7 @@ end
 end)
 
 spec:NewButton("Super screw selected user", "Ends loop screw", function()
+game:GetService("ReplicatedStorage")["Screw_Start"]:InvokeServer()
 getgenv().LoopScrew = false
                             game.StarterGui:SetCore("SendNotification", {
           Icon = "rbxassetid://10223592622"; 
